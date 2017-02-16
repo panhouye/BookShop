@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/color_theme"
+        app:pstsTabBackground="@color/transparent"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsIndicatorColor="@color/yellow"
+        app:pstsTextAllCaps="false"
+        app:pstsUnderlineHeight="2dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在玩命加载中......"
+            android:textColor="#8b8a8a"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_search_btn_container"/>
+
+    <LinearLayout
+        android:id="@+id/ll_search_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_btn_bg"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/tabs"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_search_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/search_drawable_left"
+            android:text="搜索"
+            android:textColor="#FF666666"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

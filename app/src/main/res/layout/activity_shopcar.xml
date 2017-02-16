@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBlue"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="返回"
+            android:clickable="true"
+            android:id="@+id/shopcar_back"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="购物车"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="编辑"
+            android:clickable="true"
+            android:id="@+id/shopcar_edit"
+            android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="完成"
+            android:clickable="true"
+            android:id="@+id/shopcar_finish"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"/>
+    </LinearLayout>
+   <ListView
+       android:id="@+id/shopping_list"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1">
+   </ListView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorBack"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/shopcar_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共N件商品"/>
+            <TextView
+                android:id="@+id/shopcar_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金额：N元"
+                android:textColor="#f97e83"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/shopcar_pay"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="去结算"
+            android:textColor="@color/colorWhite"
+            android:background="#eb5256"/>
+    </LinearLayout>
+</LinearLayout>

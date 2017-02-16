@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@color/color_theme"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            android:textSize="25dp"
+            android:textColor="@color/colorWhite"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/home_shopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:src="@drawable/button_cart_bg"/>
+    </LinearLayout>
+    <com.panxw.android.imageindicator.ImageIndicatorView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/indicate_view">
+    </com.panxw.android.imageindicator.ImageIndicatorView>
+    <LinearLayout
+        android:id="@+id/loading_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8b8a8a"
+            android:text="@string/loading"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/indicate_view"
+        android:layout_centerHorizontal="true">
+
+        <ListView
+            android:id="@+id/book_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

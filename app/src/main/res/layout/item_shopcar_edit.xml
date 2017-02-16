@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="书名书名书名书名书名书名书名书名书名书名书名"
+        android:lines="3"
+        android:ellipsize="start"
+        android:padding="5dp"
+        android:id="@+id/item_shopCarEdit_bookName"
+        android:layout_toEndOf="@+id/item_shopCarEdit_bookIcon"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/item_shopCarEdit_bookName"
+        android:layout_alignEnd="@+id/item_shopCarEdit_bookName">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:id="@+id/item_shopCarEdit_del"
+            android:src="@drawable/btn_delete_bg"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小计"
+        android:lines="1"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:id="@+id/item_shopCarEdit_subtotal"
+        android:layout_alignBottom="@+id/linearLayout4"
+        android:layout_toEndOf="@+id/item_shopCarEdit_bookIcon"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/item_shopCarEdit_bookIcon"
+        android:clickable="true"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@mipmap/logo"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@mipmap/logo"
+        fresco:failureImageScaleType="centerInside"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+</RelativeLayout>

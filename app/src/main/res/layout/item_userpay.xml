@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/item_userpay_bookcon"
+        android:clickable="true"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@mipmap/de_default_portrait"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@mipmap/de_default_portrait"
+        fresco:failureImageScaleType="centerInside"
+        />
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="书名"
+        android:layout_weight="1"
+        android:lines="1"
+        android:ellipsize="marquee"
+        android:layout_marginStart="10dp"
+        android:id="@+id/item_userpay_bookname"/>
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x2"
+        android:layout_marginStart="10dp"
+        android:id="@+id/item_userpay_bookcount"/>
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="价格"
+        android:id="@+id/item_userpay_bookprice"/>
+
+</LinearLayout>
